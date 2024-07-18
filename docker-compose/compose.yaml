@@ -8,6 +8,8 @@ services:
       MYSQL_ROOT_PASSWORD: Galerien3?
       MYSQL_DATABASE: restdb
       MYSQL_USER: restadmin
-      MYSQL_PASSWORD: password
-    expose:
-      - 3306
+      MYSQL_PASSWORD: restadmin
+    #expose:
+    #  - 3306
+    ports:
+      - 3308:3306
