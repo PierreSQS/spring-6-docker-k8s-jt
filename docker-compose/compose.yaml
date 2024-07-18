@@ -1,0 +1,13 @@
+services:
+  mysql:
+    container_name: mysql-spring-6-jt
+    image: mysql:8
+    # for macs
+    # platform: linux/arm64
+    environment:
+      MYSQL_ROOT_PASSWORD: Galerien3?
+      MYSQL_DATABASE: restdb
+      MYSQL_USER: restadmin
+      MYSQL_PASSWORD: password
+    expose:
+      - 3306
