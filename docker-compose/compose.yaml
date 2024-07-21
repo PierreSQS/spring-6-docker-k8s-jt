@@ -6,7 +6,7 @@ services:
     # platform: linux/arm64
     environment:
       MYSQL_ROOT_PASSWORD: Galerien3?
-      MYSQL_DATABASE: restdb
+      MYSQL_DATABASE: jt_spring6_sect16_chap170_db
       MYSQL_USER: restadmin
       MYSQL_PASSWORD: restadmin
     #expose:
