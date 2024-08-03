@@ -20,5 +20,14 @@ spec:
       containers:
       - image: mysql:8
         name: mysql
+        env:
+          - name: MYSQL_DATABASE
+            value: jt_spring6_sect16_chap170_db
+          - name: MYSQL_ROOT_PASSWORD
+            value: Galerien3?
+          - name: MYSQL_USER
+            value: restadmin
+          - name: MYSQL_PASSWORD
+            value: restadmin
         resources: {}
 status: {}
