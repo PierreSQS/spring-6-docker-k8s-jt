@@ -20,5 +20,10 @@ spec:
       containers:
       - image: mongo
         name: mongo
+        env:
+          - name: MONGO_INITDB_ROOT_USERNAME
+            value: root
+          - name: MONGO_INITDB_ROOT_PASSWORD
+            value: example
         resources: {}
 status: {}
