@@ -40,6 +40,11 @@ Delete Service for Mongo
 kubectl delete service mongo
 ```
 
+Delete all Resources with the label *app=mongo*
+```bash
+kubectl delete all -l app=mongo
+```
+
 Delete Deployment for Mongo
 ```bash
 kubectl delete deployment mongo
