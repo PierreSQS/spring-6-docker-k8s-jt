@@ -21,4 +21,7 @@ spec:
       - image: spring-6-rest-mvc:0.0.1-SNAPSHOT
         name: spring-6-rest-mvc
         resources: {}
+        env:
+          - name: SPRING_PROFILES_ACTIVE
+            value: localmysql
 status: {}
