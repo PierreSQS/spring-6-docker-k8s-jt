@@ -26,4 +26,6 @@ spec:
             value: localmysql
           - name: SPRING_DATASOURCE_URL
             value: jdbc:mysql://mysql-service:3306/jt_spring6_sect16_chap170_db
+          - name: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI
+            value: http://auth-server:9000
 status: {}
