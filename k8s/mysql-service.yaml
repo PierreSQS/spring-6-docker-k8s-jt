@@ -6,13 +6,13 @@ metadata:
     app: mysql-service
   name: mysql-service
 spec:
+  type: ClusterIP
   ports:
   - name: 3008-3006
     port: 3008
     protocol: TCP
     targetPort: 3006
   selector:
-    app: mysql-service
-  type: ClusterIP
+    app: mysql
 status:
   loadBalancer: {}
