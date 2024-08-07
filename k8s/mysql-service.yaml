@@ -8,8 +8,8 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-  - name: 3308-3306
-    port: 3308
+  - name: 3306-3306
+    port: 3306
     protocol: TCP
     targetPort: 3306
   selector:
