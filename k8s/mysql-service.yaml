@@ -13,6 +13,6 @@ spec:
     protocol: TCP
     targetPort: 3306
   selector:
-    app: mysql
+    app: mysql-deploy
 status:
   loadBalancer: {}

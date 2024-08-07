@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: mysql
-  name: mysql
+    app: mysql-deploy
+  name: mysql-deploy
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: mysql
+        app: mysql-deploy
     spec:
       containers:
       - image: mysql:8
