@@ -9,7 +9,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mysql
+      app: mysql-deploy
   strategy: {}
   template:
     metadata:
