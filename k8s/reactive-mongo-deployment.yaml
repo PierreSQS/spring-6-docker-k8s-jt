@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: reactive-mongo-deploy
+  name: reactive-mongo-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactive-mongo-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: reactive-mongo-deploy
+    spec:
+      containers:
+      - image: spring-6-reactive-mongo:0.0.1-SNAPSHOT
+        name: spring-6-reactive-mongo
+        env:
+          - name: SFG_MONGOHOST
+            value: mongo
+          - name: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI
+            value: http://auth-server:9000
+        resources: {}
+status: {}
