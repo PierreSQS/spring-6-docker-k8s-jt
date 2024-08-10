@@ -9,13 +9,13 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: rest-mvc
+      app: rest-mvc-deploy
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: rest-mvc
+        app: rest-mvc-deploy
     spec:
       containers:
       - image: spring-6-rest-mvc:0.0.1-SNAPSHOT
