@@ -1,7 +1,7 @@
 services:
   mysql-8.0:
     image: mysql:8.0
-    container_name: mysql-8.0
+    container_name: mysql-8.0-jt
     environment:
       MYSQL_ROOT_PASSWORD: Galerien3?
       MYSQL_USER: restdadmin
@@ -12,6 +12,15 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "3309:3306"
+
+  mongo-jt:
+    image: mongo:latest
+    container_name: mongo-jt
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Galerien3?
+    ports:
+      - "27017:27017"
 
 volumes:
   mysql-8.0:
