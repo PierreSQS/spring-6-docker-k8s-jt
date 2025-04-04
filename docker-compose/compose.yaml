@@ -43,9 +43,9 @@ services:
     container_name: rest-mvc-jt
     environment:
       SPRING_PROFILES_ACTIVE: localmysql
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/restdb
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-8.0-jt:3306/restdb
       SPRING_DATASOURCE_USERNAME: restdadmin
-      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://auth-server:9000
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://auth-server-jt:9000
       SERVER_PORT: 8080
     ports:
       - "8080:8080"
