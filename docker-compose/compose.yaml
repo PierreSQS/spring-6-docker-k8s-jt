@@ -54,6 +54,24 @@ services:
             condition: service_healthy
         auth-server:
             condition: service_healthy
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  gateway:
+    image: pierrotadesso/spring-6-gateway:sb344sec49
+    container_name: gateway-jt
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://auth-server-jt:9000
+      SERVER_PORT: 8080
+    ports:
+      - "8080:8080"
+    depends_on:
+        rest-mvc:
+            condition: service_healthy
 
 volumes:
   mysql-8.0:
